@@ -1,3 +1,50 @@
 @import "../_snowpack/pkg/tailwindcss/dist/base.css";
 @import "../_snowpack/pkg/tailwindcss/dist/components.css";
 @import "../_snowpack/pkg/tailwindcss/dist/utilities.css";
+
+
+/*con tailwind podemos agregar directamente las clases que nos muestra en la pagina web en nuestras etiquetas y esas al exportar automaticamente tomarán los estilos que corresponden a esas clases*/
+body{
+    background-color: #d5db92;
+}
+.text-center{
+    background-color: #bc7b59;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+.text-center h3{
+    color: #b4ba88;
+}
+.text-center p{
+    color: white;
+    font-size: 26px;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    
+}
+
+.element-container{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: #889148;
+    border-radius: 15px;
+    box-shadow: 4px 4px #212500;
+}
+
+
+
+
+.avocado{
+    width: 80%;
+    margin: 0 auto;
+    background-color: blue;
+}
+
+#container .element-container h2 , div{
+    color: white;
+}

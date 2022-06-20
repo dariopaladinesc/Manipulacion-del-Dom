@@ -3,9 +3,11 @@
  * When you're ready to start on your site, clear the file. Happy hacking!
  **/
 
+
+
 const url = "https://platzi-avo.vercel.app/api/avo"  // url original de la api
 const baseUrl = "https://platzi-avo.vercel.app"  // url para poder cargar las img
-const app = document.querySelector("#container")
+const principalContainer = document.querySelector("#container")
 
 // //web api
 
@@ -18,21 +20,25 @@ window.fetch(url)
         const image = document.createElement("img");  // por c/item que recorre del data (son 9) estamos creando esos contenedores 
         // image.setAttribute("src", baseUrl + element.image)
         image.src = baseUrl + element.image;
+        image.classList.add("avocado")
 
         const title = document.createElement("h2")
         title.textContent= element.name;
-        title.className= "text-xl text-red-600"
+        title.className= "text-xl"
 
         const price = document.createElement("div")
         price.textContent = formatPrice(element.price) // llamamos a la FN formatprice
 
-        const container = document.createElement("div");
 
-        container.append(image, title, price) // con append puedo agregar varios nodos con una sola instruccion, con appendchild es nodo x nodo
+        const secondContainer = document.createElement("div");
+        secondContainer.classList.add("element-container")
         
-        todosItems.push(container)
+
+        secondContainer.append(image, title, price) // con append puedo agregar varios nodos con una sola instruccion, con appendchild es nodo x nodo
+        
+        todosItems.push(secondContainer)
     }); 
-    app.append(... todosItems)
+    principalContainer.append(... todosItems)// todos los tags creados se guarden en este contenedor padre
 })
 
 
