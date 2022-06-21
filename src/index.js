@@ -8,8 +8,10 @@
 const url = "https://platzi-avo.vercel.app/api/avo"  // url original de la api
 const baseUrl = "https://platzi-avo.vercel.app"  // url para poder cargar las img
 const principalContainer = document.querySelector("#container")
-
-// //web api
+principalContainer.addEventListener("click",(event)=>{
+    if(event.target.nodeName === "H2")
+    window.alert("hola")
+})
 
 window.fetch(url)
 .then((respuesta) => respuesta.json()) // conviertiendo datos a json
@@ -29,11 +31,9 @@ window.fetch(url)
         const price = document.createElement("div")
         price.textContent = formatPrice(element.price) // llamamos a la FN formatprice
 
-
         const secondContainer = document.createElement("div");
         secondContainer.classList.add("element-container")
         
-
         secondContainer.append(image, title, price) // con append puedo agregar varios nodos con una sola instruccion, con appendchild es nodo x nodo
         
         todosItems.push(secondContainer)

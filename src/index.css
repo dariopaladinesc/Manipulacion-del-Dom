@@ -36,15 +36,13 @@ body{
     box-shadow: 4px 4px #212500;
 }
 
-
-
-
 .avocado{
     width: 80%;
     margin: 0 auto;
-    background-color: blue;
+    border-radius: 5px;
 }
 
 #container .element-container h2 , div{
     color: white;
+    margin-left: 10px;
 }
